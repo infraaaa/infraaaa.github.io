@@ -1,0 +1,31 @@
+<h2 data-value="infra">infra</H2>
+<link rel="stylesheet" href="format.css">
+<button class="button" style="text-align:middle" onclick="window.location.href='https://www.twitch.tv/infraaaaq';"><span>Twitch </span></button>
+<button class="button" style="text-align:middle" onclick="window.location.href='https://www.youtube.com/channel/UCjp9rLlRBrEiCLh9ZsfV_0A';"><span>Youtube </span></button>
+
+
+<script>
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+const init = () => {
+    const target = document.querySelector("h2");
+    let iterations = 0;
+  
+  const interval = setInterval(() => {
+  target.innerText = target.innerText.split("")
+      .map((letter, index) => {
+          if (index + 4 < iterations / 3) {
+              return target.dataset.value[index];
+          }
+
+          return letters[Math.floor(Math.random()*26)]
+      })
+      .join("");
+
+      if(iterations >= (4 + target.dataset.value.length) * 3) clearInterval(interval);
+      iterations +=1
+  }, 30);
+}
+
+init();
+</script>
