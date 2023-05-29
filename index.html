@@ -1,8 +1,9 @@
+<link rel="icon" href="icon.png" type="image/icon type">
+<title> infra's links </title>
 <h2 data-value="infra">infra</H2>
 <link rel="stylesheet" href="format.css">
 <button class="button" style="text-align:middle" onclick="window.location.href='https://www.twitch.tv/infraaaaq';"><span>Twitch </span></button>
 <button class="button" style="text-align:middle" onclick="window.location.href='https://www.youtube.com/channel/UCjp9rLlRBrEiCLh9ZsfV_0A';"><span>Youtube </span></button>
-
 
 <script>
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -18,7 +19,7 @@ const init = () => {
               return target.dataset.value[index];
           }
 
-          return letters[Math.floor(Math.random()*26)]
+          return letters[Math.floor(Math.random()*letters.length)]
       })
       .join("");
 
